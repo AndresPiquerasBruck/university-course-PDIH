@@ -215,7 +215,7 @@ int main(){
 
 	cputchar('x');
 
-	dibujarCuadradoModoTexto(15, 15, 20, 20, 2, 3);
+	dibujarCuadradoModoTexto(20, 20, 21, 21, 2, 3);
 
 	gotoxy(0,5);
 
