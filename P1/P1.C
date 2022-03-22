@@ -112,7 +112,7 @@ void textcolor(int color){
   union REGS inregs, outregs;
 
   inregs.h.ah=0x09;
-  inregs.h.al=97; 
+  inregs.h.al=98; 
   inregs.h.bl=color;
   inregs.h.bh=0x00;
   inregs.x.cx=10; 
@@ -124,8 +124,8 @@ void textbackground(int color){
   union REGS inregs, outregs;
 
   inregs.h.ah=0x09;
-  inregs.h.al=color; 
-  inregs.h.bl=64;
+  inregs.h.al=98; 
+  inregs.h.bl=color << 4;
   inregs.h.bh=0x00;
   inregs.x.cx=10; 
 
@@ -205,7 +205,7 @@ int main(){
 
 	printf("\n\n");
 
-	textcolor(4);
+	textcolor(3);
 
 	printf("\n");
 
